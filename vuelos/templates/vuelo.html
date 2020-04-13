@@ -1,0 +1,14 @@
+<h1>Vuelo {{ vuelo.id }}</h1>
+<ul>
+    <li>Origen {{ vuelo.origen }}</li>
+    <li>Destino {{ vuelo.destino }}</li>
+</ul>
+<h2>Pasajeros</h2>
+<ul>
+    {% for pasajeros in pasajero %}
+    <li> {{pasajeros}} </li>
+    {% empty %}
+    <li>No Hay Pasajeros en dicho vuelo</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'index' %}">Regresara Lista </a>
